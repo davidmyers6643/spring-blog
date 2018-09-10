@@ -1,0 +1,16 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('List of all the ads')"></head>
+<description class="container">
+    <h1>Create an Post</h1>
+
+    <form th:action="'/posts/save'" th:method="post" th:object="${post}">
+        <label for="">Title</label>
+        <input type="text" th:field="*{title}" />
+        <label for="">Description</label>
+        <input type="text" th:field="*{body}" />
+        <button class="btn btn-primary">Submit</button>
+    </form>
+
+    <script th:replace="fragments/scripts :: scripts"></script>
+</description>
+</html>
